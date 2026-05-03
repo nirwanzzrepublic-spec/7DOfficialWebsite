@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Game Pesawat</title>
+
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  background: skyblue;
+  font-family: Arial;
+}
+
+/* tombol balik */
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 10;
+}
+
+/* tombol restart */
+#restartBtn {
+  display: none;
+  position: absolute;
+  top: 70%; /* TURUN */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+canvas {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-btn">⬅ Kembali</a>
+<button id="restartBtn">Restart 🔁</button>
+
+<canvas id="gameCanvas"></canvas>
+
+<script>
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// gambar pesawat
+let planeImg = new Image();
+planeImg.src = "fadli.png";
+
+let plane, pipes, score, gameOver;
+
+function resetGame() {
+  plane = {
+    x: 100,
+    y: canvas.height * 0.6, // TURUN dari awal 😏
+    width: 60,
+    height: 40,
+    gravity: 0.6,
+    lift: -10,
+    velocity: 0
+  };
+
+  pipes = [];
+  score = 0;
+  gameOver = false;
+
+  document.getElementById("restartBtn").style.display = "none";
+}
+
+document.addEventListener("click", () => {
+  if (!gameOver) {
+    plane.velocity = plane.lift;
+  }
+});
+
+document.getElementById("restartBtn").onclick = () => {
+  resetGame();
+};
+
+function createPipe() {
+  if (gameOver) return;
+
+  let gap = 180;
+
+  // posisi pipa lebih ke tengah bawah
+  let topHeight = Math.random() * (canvas.height * 0.5);
+
+  pipes.push({
+    x: canvas.width,
+    top: topHeight,
+    bottom: canvas.height - topHeight - gap,
+    width: 60,
+    passed: false
+  });
+}
+
+setInterval(createPipe, 1500);
+
+function update() {
+  if (gameOver) return;
+
+  plane.velocity += plane.gravity;
+  plane.y += plane.velocity;
+
+  if (plane.y + plane.height > canvas.height) {
+    gameOver = true;
+  }
+
+  pipes.forEach(pipe => {
+    pipe.x -= 3;
+
+    if (
+      plane.x < pipe.x + pipe.width &&
+      plane.x + plane.width > pipe.x &&
+      (plane.y < pipe.top || plane.y + plane.height > canvas.height - pipe.bottom)
+    ) {
+      gameOver = true;
+    }
+
+    if (!pipe.passed && pipe.x + pipe.width < plane.x) {
+      score++;
+      pipe.passed = true;
+    }
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // pesawat
+  ctx.drawImage(planeImg, plane.x, plane.y, plane.width, plane.height);
+
+  // pipa
+  ctx.fillStyle = "green";
+  pipes.forEach(pipe => {
+    ctx.fillRect(pipe.x, 0, pipe.width, pipe.top);
+    ctx.fillRect(pipe.x, canvas.height - pipe.bottom, pipe.width, pipe.bottom);
+  });
+
+  // score TURUN dikit
+  ctx.fillStyle = "black";
+  ctx.font = "28px Arial";
+  ctx.textAlign = "center";
+  ctx.fillText("Score: " + score, canvas.width / 2, canvas.height * 0.1 + 40);
+
+  // GAME OVER UI TURUN
+  if (gameOver) {
+    ctx.fillStyle = "rgba(0,0,0,0.5)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "white";
+    ctx.textAlign = "center";
+
+    let baseY = canvas.height * 0.65; // 🔥 TURUN SEMUA
+
+    ctx.font = "50px Arial";
+    ctx.fillText("GAME OVER", canvas.width / 2, baseY - 40);
+
+    ctx.font = "30px Arial";
+    ctx.fillText("Score: " + score, canvas.width / 2, baseY + 20);
+
+    document.getElementById("restartBtn").style.display = "block";
+  }
+}
+
+function gameLoop() {
+  update();
+  draw();
+  requestAnimationFrame(gameLoop);
+}
+
+resetGame();
+gameLoop();
+</script>
+
+</body>
+</html>
