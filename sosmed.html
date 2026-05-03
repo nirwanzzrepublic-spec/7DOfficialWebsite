@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media - Kelas 7D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            background-color: #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #e2e8f0;
+            color: #000;
+        }
+
+        .navbar ul li .active {
+            background-color: #0284c7;
+            color: #fff;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title-section {
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Grid Social Media */
+        .social-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .social-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 40px 30px;
+            width: 280px;
+            box-shadow: 0 4px 10px rgba(148, 163, 184, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(148, 163, 184, 0.25);
+        }
+
+        .social-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Warna Ikon Unik */
+        .icon-tiktok {
+            color: #000000;
+        }
+
+        .icon-ig {
+            color: #E1306C;
+        }
+
+        .social-card h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background-color: #0284c7;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #0369a1;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 20px;
+            color: #64748b;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home / Beranda</a></li>
+            <li><a href="anggota.html">Anggota Kelas</a></li>
+            <li><a href="sosmed.html" class="active">Social Media</a></li>
+            <li><a href="piket.html">Jadwal Piket</a></li>
+            <li><a href="pelajaran.html">Jadwal Pelajaran</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="title-section">
+            <h1 class="title">Social Media Kelas 7D</h1>
+            <p class="subtitle">Yuk, ikuti keseruan dan update terbaru dari kelas kita!</p>
+        </div>
+
+        <div class="social-grid">
+            <div class="social-card">
+                <div class="social-icon icon-tiktok">♪</div>
+                <h2>TikTok</h2>
+                <p>Lihat video-video kocak, event, dan keseharian anak 7D di sini.</p>
+                <a href="https://www.tiktok.com/@seven_delight_spensabum?_r=1&_t=ZS-9639AQOb4SH" target="_blank" class="social-link">Kunjungi TikTok</a>
+            </div>
+
+            <div class="social-card">
+                <div class="social-icon icon-ig">📷</div>
+                <h2>Instagram</h2>
+                <p>Cek foto-foto kebersamaan, info tugas, dan galeri kegiatan kelas.</p>
+                <a href="https://www.instagram.com/seven_delight_spensabum?utm_source=qr&igsh=eDJ0cmk0aTkzcmRv" target="_blank" class="social-link">Kunjungi IG</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Website Kelas 7D. Tetap kompak!</p>
+    </footer>
+
+</body>
+</html>

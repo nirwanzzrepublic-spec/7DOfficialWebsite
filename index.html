@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas 7D - Sesuai Sketsa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc; /* Warna background sedikit lebih terang */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Navbar Area --- */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: center; /* Posisikan menu di tengah */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* Jarak antar tombol */
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            background-color: #f1f5f9; /* Tombol warna dasar */
+            transition: all 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #e2e8f0;
+            color: #000;
+        }
+
+        .navbar ul li .active {
+            background-color: #0284c7;
+            color: #fff;
+        }
+
+        /* --- Main Layout Container --- */
+        .container {
+            max-width: 1000px; /* Batasi lebar maksimal agar rapi */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- 1. Header Gambar (Sesuai Sketsa) --- */
+        .header-section {
+            width: 100%;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .header-img-tag {
+            width: 100%; /* Lebar penuh kontainer */
+            height: auto; /* Jaga proporsi gambar */
+            max-height: 350px; /* Batasi tinggi maks agar tidak kebesaran */
+            object-fit: cover; /* Pastikan gambar terpotong rapi jika rasio beda */
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- 2. Judul & Slogan (Sesuai Sketsa) --- */
+        .class-title-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .class-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .class-slogan {
+            font-size: 16px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* --- 3. Informasi Pengurus Kelas (Sesuai Sketsa) --- */
+        .info-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .officer-row {
+            display: flex;
+            gap: 15px; /* Jarak antar kartu */
+            margin-bottom: 40px;
+            overflow-x: auto; /* Agar bisa scroll di mobile jika penuh */
+            padding-bottom: 10px;
+        }
+
+        .officer-card {
+            background-color: #ffffff;
+            flex: 1; /* Biar semua kartu lebar sama */
+            min-width: 120px; /* Lebar minimum per kartu */
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .officer-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+
+        .card-role {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .card-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: #000;
+        }
+
+        /* --- 4. Tombol Konten Baru (Tambahan Bawah) --- */
+        .content-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .content-link-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .content-link-card:hover {
+            background-color: #f1f5f9;
+            transform: scale(1.02);
+        }
+
+        .content-link-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* --- 5. Video Section (BARU) --- */
+        .video-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Rasio 16:9 untuk video YouTube */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .video-container video, 
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home / Beranda</a></li>
+            <li><a href="anggota.html">Anggota Kelas</a></li>
+            <li><a href="sosmed.html">Social Media</a></li>
+            <li><a href="piket.html">Jadwal Piket</a></li>
+            <li><a href="pelajaran.html">Jadwal Pelajaran</a></li>
+            <li><a href="galeri.html">Galeri</a></li>            
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <header class="header-section">
+            <img src="header7d.png" alt="Header Website Kelas 7D" class="header-img-tag">
+        </header>
+
+           <div class="class-title-section">
+            <h1 class="class-title">Kelas 7D</h1>
+            <p class="class-slogan">Slogan - Slogan Kelas</p>
+        </div>
+
+        <h2 class="info-title">Informasi</h2>
+        <div class="officer-row">
+            <div class="officer-card">
+                <p class="card-role">wali kelas</p>
+                <p class="card-name">Ibu Ermi Asrifahsya</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Ketua</p>
+                <p class="card-name">Nahar Bada Ibrahim</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">wakil</p>
+                <p class="card-name">Alzena Naila Nasywa</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Sekretaris</p>
+                <p class="card-name">Nirwan Abdullah De Gorie</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Sekretaris</p>
+                <p class="card-name">Shahnaz Askia Zayn</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Bendahara</p>
+                <p class="card-name">Abni Sansabila Putri</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Bendahara</p>
+                <p class="card-name">Arga Hendriansyah</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Sarpras</p>
+                <p class="card-name">Izzan Boby</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Kerohanian</p>
+                <p class="card-name">Vidyandika Pratama</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Olahraga</p>
+                <p class="card-name">Azkadia Ahzahanan</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Keamanan</p>
+                <p class="card-name">M Fadly Fhatar</p>
+            </div>
+            <div class="officer-card">
+                <p class="card-role">Kekeluargaan</p>
+                <p class="card-name">Shevanni Restu Adzkia</p>
+            </div>
+        </div>
+
+        <h2 class="info-title">Jelajahi Konten</h2>
+        <div class="content-links-grid">
+            <a href="anggota.html" class="content-link-card">
+                <p class="content-link-title">Daftar Anggota</p>
+            </a>
+            <a href="pelajaran.html" class="content-link-card">
+                <p class="content-link-title">Jadwal Pelajaran</p>
+            </a>
+            <a href="piket.html" class="content-link-card">
+                <p class="content-link-title">Jadwal Piket</p>
+            </a>
+            <a href="galeri.html" class="content-link-card">
+                <p class="content-link-title">Galeri Foto</p>
+            </a>
+            <a href="fadlinaikpesawat.html" class="content-link-card">
+                <p class="content-link-title">Game</p>
+            </a>
+        </div>
+
+       <div class="video-section">
+    <h2 class="info-title">Animasi LogoKelas</h2>
+    <div class="video-container">
+       <video width="150%" autoplay muted loop playsinline>
+    <source src="video.mp4" type="video/mp4">
+    Browser kamu tidak mendukung pemutaran video ini.
+</video>
+
+    </div>
+</div>
+
+
+</body>
+</html>
