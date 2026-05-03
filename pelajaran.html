@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pelajaran - Kelas 7D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            background-color: #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #e2e8f0;
+            color: #000;
+        }
+
+        .navbar ul li .active {
+            background-color: #0284c7;
+            color: #fff;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Grid Jadwal */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .schedule-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(148, 163, 184, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .schedule-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(148, 163, 184, 0.2);
+        }
+
+        .day-header {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0284c7;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        .subject-list {
+            list-style: none;
+        }
+
+        .subject-item {
+            padding: 8px 0;
+            font-size: 14px;
+            color: #334155;
+            border-bottom: 1px dashed #f1f5f9;
+        }
+
+        .subject-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #64748b;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="anggota.html">Anggota Kelas</a></li>
+            <li><a href="sosmed.html">Social Media</a></li>
+            <li><a href="piket.html">Jadwal Piket</a></li>
+            <li><a href="pelajaran.html" class="active">Jadwal Pelajaran</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="title-section">
+            <h1 class="title">Jadwal Pelajaran Kelas 7D</h1>
+            <p class="subtitle">spensabum class vii-D / 7D</p>
+        </div>
+
+        <div class="schedule-grid">
+            
+            <div class="schedule-card">
+                <div class="day-header">Senin</div>
+                <ul class="subject-list">
+                    <li class="subject-item">Matematika</li>
+                    <li class="subject-item">Bahasa Indonesia</li>
+                    <li class="subject-item">BK (Bimbingan Konseling)</li>
+                    <li class="subject-item">Informatika</li>
+                </ul>
+            </div>
+
+            <div class="schedule-card">
+                <div class="day-header">Selasa</div>
+                <ul class="subject-list">
+                    <li class="subject-item">IPA</li>
+                    <li class="subject-item">Bahasa Indonesia</li>
+                    <li class="subject-item">Pendidikan Pancasila</li>
+                    <li class="subject-item">IPS</li>
+                </ul>
+            </div>
+
+            <div class="schedule-card">
+                <div class="day-header">Rabu</div>
+                <ul class="subject-list">
+                    <li class="subject-item">PJOK</li>
+                    <li class="subject-item">Seni Musik</li>
+                    <li class="subject-item">Informatika</li>
+                    <li class="subject-item">Pendidikan Pancasila</li>
+                </ul>
+            </div>
+
+            <div class="schedule-card">
+                <div class="day-header">Kamis</div>
+                <ul class="subject-list">
+                    <li class="subject-item">IPA</li>
+                    <li class="subject-item">Bahasa Indonesia</li>
+                    <li class="subject-item">PAI</li>
+                    <li class="subject-item">Seni Musik</li>
+                </ul>
+            </div>
+
+            <div class="schedule-card">
+                <div class="day-header">Jumat</div>
+                <ul class="subject-list">
+                    <li class="subject-item">PAI</li>
+                    <li class="subject-item">Bahasa Jawa</li>
+                    <li class="subject-item">Bahasa Inggris</li>
+                </ul>
+            </div>
+
+            <div class="schedule-card">
+                <div class="day-header">Sabtu</div>
+                <ul class="subject-list">
+                    <li class="subject-item">Bahasa Inggris</li>
+                    <li class="subject-item">Matematika</li>
+                    <li class="subject-item">IPS</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Website Kelas 7D. Dibuat dengan semangat belajar!</p>
+    </footer>
+
+</body>
+</html>

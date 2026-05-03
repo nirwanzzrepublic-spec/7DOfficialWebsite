@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Kenangan - Kelas 7D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Navbar (Sama Kek Halaman Lain) --- */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            background-color: #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #e2e8f0;
+            color: #000;
+        }
+
+        .navbar ul li .active {
+            background-color: #0284c7;
+            color: #fff;
+        }
+
+        /* --- Container Utama --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* --- Grid Galeri (Inti Halaman) --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px; /* Jarak antar foto */
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden; /* Biar hover effect rapi */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            aspect-ratio: 1 / 1; /* Biar semua foto jadi kotak sempurna */
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03); /* Sedikit zoom saat hover */
+            z-index: 10; /* Biar di depan yang lain */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Biar gambar penuh di kotak tanpa distorsi */
+            transition: filter 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            filter: brightness(80%); /* Sedikit gelap saat hover */
+        }
+
+        /* Teks Deskripsi (Muncul Saat Hover) */
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            opacity: 0; /* Sembunyi dulu */
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1; /* Muncul saat hover */
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: #64748b;
+            font-size: 13px;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home / Beranda</a></li>
+            <li><a href="anggota.html">Anggota Kelas</a></li>
+            <li><a href="sosmed.html">Social Media</a></li>
+            <li><a href="piket.html">Jadwal Piket</a></li>
+            <li><a href="pelajaran.html">Jadwal Pelajaran</a></li>
+            <li><a href="galeri.html" class="active">Galeri</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="title-section">
+            <h1 class="title">Galeri Kenangan Kelas 7D</h1>
+            <p class="subtitle">Kumpulan momen seru, tawa, dan kebersamaan kita.</p>
+        </div>
+
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <img src="1.jpg" alt="Momen Seru Kelas 7D">
+                <div class="gallery-caption">bukber di Lan's Concer'.</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="2.jpg" alt="Momen Seru Kelas 7D">
+                <div class="gallery-caption">Foto-Foto Di Lan's Corner</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="3.jpg" alt="Momen Seru Kelas 7D">
+                <div class="gallery-caption">Bukber Di Lan's Corner (makan-makan)</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="4.jpg" alt="Momen Seru Kelas 7D">
+                <div class="gallery-caption">Foto Foto Dikelas Pas Hari kartini</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="5.jpg" alt="Momen Seru Kelas 7D">
+                <div class="gallery-caption">Foto Bersama Sebelum Ikut Lomba Teaterical Hari Kartini</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="6.jpg" alt="Momen Seru Kelas 7D">
+                <div class="gallery-caption">Momen waktu senggang, foto-foto di Gazebo pake digicam</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="8.jpg"Momen Seru Kelas 7D">
+                <div class="gallery-caption">Foto-Foto pake digicam lagi</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="7.jpg" alt="Momen Seru Kelas 7D">
+                <div class="gallery-caption">Sesudah ikut Teaterical</div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Website Kelas 7D. Kenangan tak terlupakan!</p>
+    </footer>
+
+</body>
+</html>

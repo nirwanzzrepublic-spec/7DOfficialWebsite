@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Anggota - Kelas 7D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            background-color: #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #e2e8f0;
+            color: #000;
+        }
+
+        .navbar ul li .active {
+            background-color: #0284c7;
+            color: #fff;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Grid Anggota */
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .member-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(148, 163, 184, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(148, 163, 184, 0.2);
+        }
+
+        .member-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #f1f5f9;
+        }
+
+        .member-number {
+            font-size: 12px;
+            color: #0284c7;
+            font-weight: 600;
+            background-color: #e0f2fe;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        .member-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .member-id {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #64748b;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home / Beranda</a></li>
+            <li><a href="anggota.html" class="active">Anggota Kelas</a></li>
+            <li><a href="sosmed.html">Social Media</a></li>
+            <li><a href="piket.html">Jadwal Piket</a></li>
+            <li><a href="pelajaran.html">Jadwal Pelajaran</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="title-section">
+            <h1 class="title">Daftar Anggota Kelas 7D</h1>
+            <p class="subtitle">Kenalan sama teman-teman sekelas!</p>
+        </div>
+
+        <div class="member-grid">
+            
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 1</div>
+                <div class="member-name">Abni Sansabila</div>
+                <div class="member-id">NIS: -</div>
+            </div>
+            
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 2</div>
+                <div class="member-name">Akhtar Deniz Farshad</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 3</div>
+                <div class="member-name">Alviano Nur Nanda</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 4</div>
+                <div class="member-name">Alzena Naila Nasywa</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 5</div>
+                <div class="member-name">Amenfi Keysha Mukhyidin</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 6</div>
+                <div class="member-name">Anindya Faraza Shanum</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 7</div>
+                <div class="member-name">Arga Herdiansyah</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 8</div>
+                <div class="member-name">Arsyakha Adia Zhafira</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 9</div>
+                <div class="member-name">Azka Naila Azzahra</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 10</div>
+                <div class="member-name">Azkadia Ahzahanan Alvaro</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 11</div>
+                <div class="member-name">Danar Bagas Priambudi</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 12</div>
+                <div class="member-name">Denti Qaireen Nafisa</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 13</div>
+                <div class="member-name">Elena Dwi Anindya</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 14</div>
+                <div class="member-name">Fitri Aura Ramadani</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 15</div>
+                <div class="member-name">Izzan Boby Aldriyansa</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 16</div>
+                <div class="member-name">Keisha Fadia Naumi</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 17</div>
+                <div class="member-name">M. Kenzie Hafidz Abdulloh</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 18</div>
+                <div class="member-name">Muhammad Fadly Fathar El Fawaz</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 19</div>
+                <div class="member-name">Muhammad Fiqih Haekal</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 20</div>
+                <div class="member-name">Muhammad Raffa Hafiz Al Farizhi</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 21</div>
+                <div class="member-name">Mutiara Zahsy Kirana</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 22</div>
+                <div class="member-name">Nahar Bada Ibrohim</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 23</div>
+                <div class="member-name">Nasya Sabila</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 24</div>
+                <div class="member-name">Nayla Marsela Yustisia</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 25</div>
+                <div class="member-name">Neysa Putri Hervida</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 26</div>
+                <div class="member-name">Nirwan Abdullah De Gorie</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 27</div>
+                <div class="member-name">Ocha Febyola Turnip</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 28</div>
+                <div class="member-name">Putri Citra Lestari</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 29</div>
+                <div class="member-name">Rania Wida Febriani</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 30</div>
+                <div class="member-name">Shafa Tri Arumi</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 31</div>
+                <div class="member-name">Shahnaz Azkia Zayn Nawawi</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 32</div>
+                <div class="member-name">Shevani Restu Adzkia</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 33</div>
+                <div class="member-name">Syafiqa Balqis Almahira</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 34</div>
+                <div class="member-name">Syaheedan Naufal Al Fathin</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Foto Anggota" class="member-photo">
+                <div class="member-number">No. 35</div>
+                <div class="member-name">Viyandicka Pratama Iskandar</div>
+                <div class="member-id">NIS: </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Website Kelas 7D. Tetap kompak!</p>
+    </footer>
+
+</body>
+</html>
